@@ -1,4 +1,4 @@
-# word shifter v1.0 by piers
+# word shifter v1.0 by bobtie
 
 
 debug = input("enable debug mode? ") 
