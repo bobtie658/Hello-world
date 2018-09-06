@@ -1,3 +1,7 @@
+# game v0.75
+# wip, not tested
+
+
 print("welcome to game, enjoy your stay")
 
 i1 = input("what is your first item ")
