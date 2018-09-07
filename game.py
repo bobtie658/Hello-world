@@ -29,31 +29,31 @@ if (mid == 1):
     dx = 10
 
 if (mid == 2):
-    m = "duck"
+    m = "cat"
     mh = 40
     dm = 5
     dx = 10
 
 if (mid == 3):
-    m = "pidgeon"
+    m = "fox"
     mh = 50
     dm = 7
     dx = 15
 
 if (mid == 4):
-    m = "anteater"
+    m = "snake"
     mh = 60
     dm = 9
     dx = 15
 
 if (mid == 5):
-    m = "snake"
+    m = "monkey"
     mh = 70
     dm = 10
     dx = 15
 
 if (mid == 6):
-    m = "rhino"
+    m = "dolphin"
     mh = 80
     dm = 15
     dx = 17
@@ -65,7 +65,7 @@ if (mid == 7):
     dx = 17
 
 if (mid == 8):
-    m = "dolphin"
+    m = "rhino"
     mh = 100
     dm = 17
     dx = 20
