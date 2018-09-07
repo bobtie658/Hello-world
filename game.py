@@ -1,5 +1,5 @@
-# game v0.75
-# wip, not tested
+# welcome to game v1.0 by bobtie658
+# currently functional, will add comments later
 
 
 print("welcome to game, enjoy your stay")
@@ -8,11 +8,13 @@ i1 = input("what is your first item ")
 
 i2 = input("what is your second item ")
 
-i1d = randint(1,21)
+import random
 
-i2d = randint(1,21)
+i1d = random.randint(1,20)
 
-mid = randint(1,11)
+i2d = random.randint(1,20)
+
+mid = random.randint(1,10)
 
 i3 = ""
 
@@ -20,62 +22,62 @@ i3d = 0
 
 h = 150
 
-if mid = 1:
-    m = "a chicken"
+if (mid == 1):
+    m = "chicken"
     mh = 30
     dm = 1
     dx = 10
 
-if mid = 2:
-    m = "a duck"
+if (mid == 2):
+    m = "duck"
     mh = 40
     dm = 5
     dx = 10
 
-if mid = 3:
-    m = "a pidgeon"
+if (mid == 3):
+    m = "pidgeon"
     mh = 50
     dm = 7
     dx = 15
 
-if mid = 4:
-    m = "an anteater"
+if (mid == 4):
+    m = "anteater"
     mh = 60
     dm = 9
     dx = 15
 
-if mid = 5:
-    m = "a snake"
+if (mid == 5):
+    m = "snake"
     mh = 70
     dm = 10
     dx = 15
 
-if mid = 6:
-    m = "a rhino"
+if (mid == 6):
+    m = "rhino"
     mh = 80
     dm = 15
     dx = 17
 
-if mid = 7:
-    m = "an elephant"
+if (mid == 7):
+    m = "elephant"
     mh = 90
     dm = 15
     dx = 17
 
-if mid = 8:
-    m = "a dolphin"
+if (mid == 8):
+    m = "dolphin"
     mh = 100
     dm = 17
     dx = 20
 
-if mid = 9:
-    m = "a shark"
+if (mid == 9):
+    m = "shark"
     mh = 110
     dm = 15
     dx = 22
 
-if mid = 10:
-    m = "A really big shark"
+if (mid == 10):
+    m = "really big shark"
     mh = 120
     dm = 20
     dx = 25
@@ -85,28 +87,28 @@ mho = mh
 print("you will fight a "+m+" with "+str(mh)+" health")
 print("to attack the "+m+" type 'a' and to switch items, press 's'")
 
-while not (mh = 0) or not (h = 0):
+while not (mh <= 0) or not (h <= 0):
     print("you are currently attacking with a "+i1)
-    print("your health: "+h)
-    print(m+"health"+mh)
+    print("your health: "+str(h))
+    print(m+" health: "+str(mh))
     
     i = input()
     
-    if i = "a":
+    if i == "a":
         
-        c = randint(1,11)
+        c = random.randint(1,10)
         
-        if c = 1:
+        if c == 1:
            print("you miss")
         
-        elif c = 10:
+        elif c == 10:
             print ("critical hit")
             mh = (mh-(2*i1d))
             
         else:
             mh = (mh-i1d)
             
-    if i = "s":
+    if i == "s":
         i3 = i1
         i1 = i2
         i2 = i3
@@ -115,13 +117,12 @@ while not (mh = 0) or not (h = 0):
         i1d = i2d
         i2d = i3d
         
-    h = (h-randint(dm,dx))
+    h = (h-random.randint(dm,dx))
     
-    
-    if mh = 0:
+    if mh <= 0:
         print("you won!")
         
-    elif h = 0:
+    elif h <= 0:
         print("you lost")
         
 input()
