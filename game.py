@@ -11,8 +11,8 @@ i2=""
 
 while (i1==i2):
 
-    i1 = input("what is your first item ")
-    i2 = input("what is your second item ")
+    i1 = input("what is your first weapon ")
+    i2 = input("what is your second weapon ")
     print("")
 
 print("")
