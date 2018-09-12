@@ -1,18 +1,24 @@
-# welcome to game v2.0 by bobtie658
+# welcome to game v2.1 by bobtie658
 # currently functional, will add comments later
+# 2.1 log: minor bug fixes
 # 2.0 log: added multiple rounds, potions and prevented the same animal from coming up across different rounds
 
 
 print("welcome to game, enjoy your stay")
 
-i1 = input("what is your first item ")
+i1=""
+i2=""
 
-i2 = input("what is your second item ")
+while (i1==i2):
 
-print("")
+    i1 = input("what is your first item ")
+    i2 = input("what is your second item ")
+    print("")
+
 print("")
 
 import random
+import isdigit
 
 du=False
 ca=False
@@ -26,21 +32,14 @@ sh=False
 rsh=False
 
 i3 = ""
-
 i3d = 0
-
 h = 150
-
 p = 5
-
 r = 5
-
 rn = 1
-
 x = 0
 
 i1d = random.randint(1,20)
-
 i2d = random.randint(1,20)
 
 while not (h<=0) or not (r==0):
@@ -196,9 +195,11 @@ while not (h<=0) or not (r==0):
         rn = rn+1
         print("")
         print("you have "+str(h)+" health remaining and "+str(p)+" potions remaining, how many would you like to use?")
-        up = int(input(""))
-        oh = h
+        up = ""
+        while up.isdigit():
+            up = input("")
         
+        oh = h
         if (up<p):
             h = (h+(75*up))
             p=p-up
