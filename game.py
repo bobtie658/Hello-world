@@ -18,7 +18,6 @@ while (i1==i2):
 print("")
 
 import random
-import isdigit
 
 du=False
 ca=False
@@ -201,6 +200,7 @@ while not (h<=0) or not (r==0):
         while up.isdigit():
             up = input("")
         
+        up = str(up)
         oh = h
         if (up<p):
             h = (h+(75*up))
