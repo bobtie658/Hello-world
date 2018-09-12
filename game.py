@@ -127,8 +127,6 @@ while not (h<=0) or not (r==0):
             dx = 25
             x=x+1
             rsh = True
-
-    mho = mh
     
     print("round "+str(rn))
     print("you will fight a "+m+" with "+str(mh)+" health")
@@ -154,10 +152,14 @@ while not (h<=0) or not (r==0):
         
             elif c == 10:
                 print ("critical hit")
+                mho = mh
                 mh = (mh-(2*i1d))
+                print("you did "+str(mho-mh)+" damage")
             
             else:
+                mho = mh
                 mh = (mh-i1d)
+                print("you did "+str(mho-mh)+" damage")
             
         if i == "s":
             i3 = i1
@@ -191,7 +193,7 @@ while not (h<=0) or not (r==0):
         break
     
     if h>0 and r>0:
-        r = r-1    
+        r = r-1
         rn = rn+1
         print("")
         print("you have "+str(h)+" health remaining and "+str(p)+" potions remaining, how many would you like to use?")
