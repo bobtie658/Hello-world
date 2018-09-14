@@ -1,7 +1,7 @@
 # welcome to game v2.1 by bobtie658
 # currently functional, will add comments later
 # 3.0   log: added shop
-# 2.1   log: minor bug fixes
+# 2.1  log: minor bug fixes
 # 2.0   log: added multiple rounds, potions and prevented the same animal from coming up across different rounds
 
 
@@ -31,7 +31,7 @@ ho=False
 sh=False
 rsh=False
 
-m = random.randint(10,20)
+my = random.randint(10,20)
 
 i3 = ""
 i3d = 0
@@ -205,9 +205,9 @@ while not (h<=0) or not (r==0):
     
         if mh <= 0:
             print("you won the fight")
-            mo = m
-            m = m+random.randint(pm,px)
-            print("you won "+str(m-mo)+" money")
+            mo = my
+            my = my+random.randint(pm,px)
+            print("you won "+str(my-mo)+" money")
             print("")
             break
         
@@ -227,26 +227,26 @@ while not (h<=0) or not (r==0):
         while not ch == leave:
             print("1 potion costs 10 money and one weapon costs 15 money")
             print("to buy a potion, type 'potion', to buy an upgrade, type 'upgrade' and to leave, type 'leave'")
-            print("you have "+str(m)+" money")
+            print("you have "+str(my)+" money")
             print("What yould you like to buy?")
             ch = input("")
             print("")
 
-            if ch = "potion" and m >=10:
+            if ch = "potion" and my >=10:
                 p = p+1
-                m = m-10
+                my = my-10
                 print("you bought 1 potion")
 
-            if ch = "potion" and m <10:
+            if ch = "potion" and my <10:
                 print("you dont have enough money to buy a potion")
 
-            if ch = "upgrade" and m>=15:
+            if ch = "upgrade" and my>=15:
                 i1d = i1d+5
                 i2d = i2d+5
-                m = m-15
+                my = my-15
                 print("your weapon damage increased by 5")
 
-            if ch = "upgrade" and m<15:
+            if ch = "upgrade" and my<15:
                 print("you dont have enough money to buy an upgrade")
 
             if ch = "leave":
