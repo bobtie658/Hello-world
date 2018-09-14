@@ -42,6 +42,7 @@ h = 150
 p = 5
 r = 5
 rn = 1
+xn = 5
 x = 0
 
 i1d = random.randint(1,20)
@@ -49,7 +50,7 @@ i2d = random.randint(1,20)
 
 while not (h<=0) or not (r==0):
 
-    while not x == rn:
+    while not x == xn:
 
         mid = random.randint(1,10)
 
