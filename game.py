@@ -49,7 +49,7 @@ i2d = random.randint(1,20)
 
 while not (h<=0) or not (r==0):
 
-    while not x == rn:
+    while not x == rn or not(r==0):
 
         mid = random.randint(1,10)
 
