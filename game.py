@@ -1,7 +1,8 @@
 # welcome to game v2.1 by bobtie658
 # currently functional, will add comments later
-# 2.1 log: minor bug fixes
-# 2.0 log: added multiple rounds, potions and prevented the same animal from coming up across different rounds
+# 3.0   log: added shop
+# 2.12  log: minor bug fixes
+# 2.0   log: added multiple rounds, potions and prevented the same animal from coming up across different rounds
 
 
 print("welcome to game, enjoy your stay")
@@ -30,6 +31,8 @@ ho=False
 sh=False
 rsh=False
 
+m = random.randint(10,20)
+
 i3 = ""
 i3d = 0
 h = 150
@@ -54,6 +57,8 @@ while not (h<=0) or not (r==0):
             dx = 10
             x=x+1
             du = True
+            pm = 1
+            px = 10
 
         elif (mid == 2) and not ca == True:
             m = "cat"
@@ -62,6 +67,8 @@ while not (h<=0) or not (r==0):
             dx = 10
             x=x+1
             ca = True
+            pm = 3
+            px = 13
 
         elif (mid == 3) and not fo == True:
             m = "fox"
@@ -70,6 +77,8 @@ while not (h<=0) or not (r==0):
             dx = 15
             x=x+1
             fo = True
+            pm = 6
+            px = 16
 
         elif (mid == 4) and not sn == True:
             m = "snake"
@@ -78,6 +87,8 @@ while not (h<=0) or not (r==0):
             dx = 15
             x=x+1
             sn = True
+            pm = 7
+            px = 17
 
         elif (mid == 5) and not hw == True:
             m = "hawk"
@@ -86,6 +97,8 @@ while not (h<=0) or not (r==0):
             dx = 15
             x=x+1
             hw = True
+            pm = 9
+            px = 19
 
         elif (mid == 6) and not ele == True:
             m = "elephant"
@@ -94,6 +107,8 @@ while not (h<=0) or not (r==0):
             dx = 17
             x=x+1
             ele = True
+            pm = 11
+            px = 21
 
         elif (mid == 7) and not rh == True:
             m = "rhino"
@@ -102,6 +117,8 @@ while not (h<=0) or not (r==0):
             dx = 17
             x=x+1
             rh = True
+            pm = 12
+            px = 22
 
         elif (mid == 8) and not ho == True:
             m = "hippo"
@@ -110,6 +127,8 @@ while not (h<=0) or not (r==0):
             dx = 20
             x=x+1
             ho = True
+            pm = 15
+            px = 25
 
         elif (mid == 9) and not sh == True:
             m = "shark"
@@ -118,6 +137,8 @@ while not (h<=0) or not (r==0):
             dx = 22
             x=x+1
             sh = True
+            pm = 17
+            px = 27
 
         elif (mid == 10) and not rsh == True:
             m = "really big shark"
@@ -126,6 +147,8 @@ while not (h<=0) or not (r==0):
             dx = 25
             x=x+1
             rsh = True
+            pm = 20
+            px = 30
     
     print("round "+str(rn))
     print("you will fight a "+m+" with "+str(mh)+" health")
@@ -182,6 +205,10 @@ while not (h<=0) or not (r==0):
     
         if mh <= 0:
             print("you won the fight")
+            mo = m
+            m = m+random.randint(pm,px)
+            print("you won "+str(m-mo)+" money")
+            print("")
             break
         
         elif h <= 0:
@@ -194,13 +221,46 @@ while not (h<=0) or not (r==0):
     if h>0 and r>0:
         r = r-1
         rn = rn+1
+
+        
+        print("welcome to the shop, you can buy potions and weapon upgrades here")
+        while not ch == leave:
+            print("1 potion costs 10 money and one weapon costs 15 money")
+            print("to buy a potion, type 'potion', to buy an upgrade, type 'upgrade' and to leave, type 'leave'")
+            print("you have "+str(m)+" money")
+            print("What yould you like to buy?")
+            ch = input("")
+            print("")
+
+            if ch = "potion" and m >=10:
+                p = p+1
+                m = m-10
+                print("you bought 1 potion")
+
+            if ch = "potion" and m <10:
+                print("you dont have enough money to buy a potion")
+
+            if ch = "upgrade" and m>=15:
+                i1d = i1d+5
+                i2d = i2d+5
+                m = m-15
+                print("your weapon damage increased by 5")
+
+            if ch = "upgrade" and m<15:
+                print("you dont have enough money to buy an upgrade")
+
+            if ch = "leave":
+                print("you left the shop")
+                break
+        
+        
         print("")
         print("you have "+str(h)+" health remaining and "+str(p)+" potions remaining, how many would you like to use?")
-        up = ""
-        while up.isdigit():
+        up = "a"
+        while not up.isdigit():
             up = input("")
         
-        up = str(up)
+        up = int(up)
         oh = h
         if (up<p):
             h = (h+(75*up))
