@@ -8,6 +8,7 @@
 # 1.0   base game complete
 
 
+
 print("welcome to game, enjoy your stay")
 
 i1=""
@@ -49,7 +50,7 @@ i2d = random.randint(1,20)
 
 while not (h<=0) or not (r==0):
 
-    while not x == rn or not(r==0):
+    while not x == rn and x != 5:
 
         mid = random.randint(1,10)
 
@@ -152,6 +153,9 @@ while not (h<=0) or not (r==0):
             rsh = True
             pm = 20
             px = 30
+            
+        if x==5:
+            break
     
     print("round "+str(rn))
     print("you will fight a "+m+" with "+str(mh)+" health")
@@ -218,7 +222,7 @@ while not (h<=0) or not (r==0):
             print("you lost")
             break
     
-    if h<=0:
+    if h<=0 or x==5:
         break
     
     if h>0 and r>0:
@@ -239,21 +243,26 @@ while not (h<=0) or not (r==0):
                 p = p+1
                 my = my-10
                 print("you bought 1 potion")
+                print("")
 
-            if ch == "potion" and my <10:
+            elif ch == "potion" and my <10:
                 print("you dont have enough money to buy a potion")
+                print("")
 
             if ch == "upgrade" and my>=15:
                 i1d = i1d+5
                 i2d = i2d+5
                 my = my-15
                 print("your weapon damage increased by 5")
+                print("")
 
-            if ch == "upgrade" and my<15:
+            elif ch == "upgrade" and my<15:
                 print("you dont have enough money to buy an upgrade")
+                print("")
 
             if ch == "leave":
                 print("you left the shop")
+                print("")
                 break
         
         
@@ -262,6 +271,7 @@ while not (h<=0) or not (r==0):
         up = "a"
         while not up.isdigit():
             up = input("")
+            print("")
         
         up = int(up)
         oh = h
@@ -276,8 +286,11 @@ while not (h<=0) or not (r==0):
             h = 150
     
         print("you restored "+str(h-oh)+" health")
+        print("")
+        print("")
     
-if r==0:
+if x==5:
     print("")
     print("congratulations, you won!")
+    print("thank you for playing")
 input()
