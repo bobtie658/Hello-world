@@ -1,7 +1,7 @@
 # welcome to game v2.1 by bobtie658
 # currently functional, will add comments later
 # 3.0   log: added shop
-# 2.12  log: minor bug fixes
+# 2.1   log: minor bug fixes
 # 2.0   log: added multiple rounds, potions and prevented the same animal from coming up across different rounds
 
 
