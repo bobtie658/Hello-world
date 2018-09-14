@@ -227,7 +227,7 @@ while not (h<=0) or not (r==0):
 
         ch = ""
         print("welcome to the shop, you can buy potions and weapon upgrades here")
-        while not ch == leave:
+        while not ch == "leave":
             print("1 potion costs 10 money and one weapon costs 15 money")
             print("to buy a potion, type 'potion', to buy an upgrade, type 'upgrade' and to leave, type 'leave'")
             print("you have "+str(my)+" money")
