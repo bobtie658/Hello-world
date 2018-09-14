@@ -1,8 +1,11 @@
 # welcome to game v2.1 by bobtie658
 # currently functional, will add comments later
-# 3.0   log: added shop
-# 2.1  log: minor bug fixes
-# 2.0   log: added multiple rounds, potions and prevented the same animal from coming up across different rounds
+#       change log
+# 3.1   minor bug fixes
+# 3.0   added shop
+# 2.1   minor bug fixes
+# 2.0   added multiple rounds, potions and prevented the same animal from coming up across different rounds
+# 1.0   base game complete
 
 
 print("welcome to game, enjoy your stay")
@@ -222,7 +225,7 @@ while not (h<=0) or not (r==0):
         r = r-1
         rn = rn+1
 
-        
+        ch = ""
         print("welcome to the shop, you can buy potions and weapon upgrades here")
         while not ch == leave:
             print("1 potion costs 10 money and one weapon costs 15 money")
@@ -232,24 +235,24 @@ while not (h<=0) or not (r==0):
             ch = input("")
             print("")
 
-            if ch = "potion" and my >=10:
+            if ch == "potion" and my >=10:
                 p = p+1
                 my = my-10
                 print("you bought 1 potion")
 
-            if ch = "potion" and my <10:
+            if ch == "potion" and my <10:
                 print("you dont have enough money to buy a potion")
 
-            if ch = "upgrade" and my>=15:
+            if ch == "upgrade" and my>=15:
                 i1d = i1d+5
                 i2d = i2d+5
                 my = my-15
                 print("your weapon damage increased by 5")
 
-            if ch = "upgrade" and my<15:
+            if ch == "upgrade" and my<15:
                 print("you dont have enough money to buy an upgrade")
 
-            if ch = "leave":
+            if ch == "leave":
                 print("you left the shop")
                 break
         
