@@ -1,6 +1,6 @@
-print("welcome to morse v1")
-print("only lower case letters and numbers")
-print("punctuation supported: ', :, ,, !, ?, . and "+'"')
+print("welcome to morse v1.5")
+print("only letters and numbers")
+print("punctuation supported: ', :, ,, !, ?, ., &, (, ), - and "+'"')
 
 word = input("")
 length = len(word)
@@ -11,57 +11,57 @@ time = length
 while (time!=0):
     v = length-time
     
-    if word[v]=="a":
+    if word[v]=="a" or word[v]=="A":
         nword.append(". -   ")
-    elif word[v]=="b":
+    elif word[v]=="b" or word[v]=="B":
         nword.append("- . . .   ")
-    elif word[v]=="c":
+    elif word[v]=="c" or word[v]=="C":
         nword.append("- . - .   ")
-    elif word[v]=="d":
+    elif word[v]=="d" or word[v]=="D":
         nword.append("- . .   ")
-    elif word[v]=="e":
+    elif word[v]=="e" or word[v]=="E":
         nword.append(".   ")
-    elif word[v]=="f":
+    elif word[v]=="f" or word[v]=="F":
         nword.append(". . - .   ")
-    elif word[v]=="g":
+    elif word[v]=="g" or word[v]=="G":
         nword.append("- - .   ")
-    elif word[v]=="h":
+    elif word[v]=="h" or word[v]=="H":
         nword.append(". . . .   ")
-    elif word[v]=="i":
+    elif word[v]=="i" or word[v]=="I":
         nword.append(". .   ")
-    elif word[v]=="j":
+    elif word[v]=="j" or word[v]=="J":
         nword.append(". - - -   ")
-    elif word[v]=="k":
+    elif word[v]=="k" or word[v]=="K":
         nword.append("- . -   ")
-    elif word[v]=="l":
+    elif word[v]=="l" or word[v]=="L":
         nword.append(". - . .   ")
-    elif word[v]=="m":
+    elif word[v]=="m" or word[v]=="M":
         nword.append("- -   ")
-    elif word[v]=="n":
+    elif word[v]=="n" or word[v]=="N":
         nword.append("- .   ")
-    elif word[v]=="o":
+    elif word[v]=="o" or word[v]=="O":
         nword.append("- - -   ")
-    elif word[v]=="p":
+    elif word[v]=="p" or word[v]=="P":
         nword.append(". - - .   ")
-    elif word[v]=="q":
+    elif word[v]=="q" or word[v]=="Q":
         nword.append("- - . -   ")
-    elif word[v]=="r":
+    elif word[v]=="r" or word[v]=="R":
         nword.append(". - .   ")
-    elif word[v]=="s":
+    elif word[v]=="s" or word[v]=="S":
         nword.append(". . .   ")
-    elif word[v]=="t":
+    elif word[v]=="t" or word[v]=="T":
         nword.append("-   ")
-    elif word[v]=="u":
+    elif word[v]=="u" or word[v]=="U":
         nword.append(". . -   ")
-    elif word[v]=="v":
+    elif word[v]=="v" or word[v]=="V":
         nword.append(". . . -   ")
-    elif word[v]=="w":
+    elif word[v]=="w" or word[v]=="W":
         nword.append(". - -   ")
-    elif word[v]=="x":
+    elif word[v]=="x" or word[v]=="X":
         nword.append("- . . -   ")
-    elif word[v]=="y":
+    elif word[v]=="y" or word[v]=="Y":
         nword.append("- . - -   ")
-    elif word[v]=="z":
+    elif word[v]=="z" or word[v]=="Z":
         nword.append("- - . .   ")
     elif word[v]=="1":
         nword.append(". - - - -   ")
@@ -95,8 +95,14 @@ while (time!=0):
         nword.append(". . - - . .   ")
     elif word[v]==".":
         nword.append(". - . - . -   ")
-    elif word[v]=='"':
-        nword.append(". - . . - .   ")
+    elif word[v]=='&':
+        nword.append(". - . . .   ")
+    elif word[v]=='(':
+        nword.append("- . - - .   ")
+    elif word[v]==')':
+        nword.append("- . - - . -   ")
+    elif word[v]=='-':
+        nword.append("- . . . . -   ")
     elif word[v]==" ":
         nword.append("    ")
     time=time-1
