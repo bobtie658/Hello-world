@@ -95,6 +95,8 @@ while (time!=0):
         nword.append(". . - - . .   ")
     elif word[v]==".":
         nword.append(". - . - . -   ")
+    elif word[v]=='"':
+        nword.append(". - . . - .   ")
     elif word[v]=='&':
         nword.append(". - . . .   ")
     elif word[v]=='(':
