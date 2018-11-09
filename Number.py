@@ -1,4 +1,4 @@
-# word shifter v1.0 by bobtie
+# word shifter V(idk like 20) by bobtie
 
 
 debug = input("enable debug mode? ") 
