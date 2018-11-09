@@ -3,7 +3,7 @@
 # v1.1 log, added more symbols and capital letters
 
 print("welcome to morse code translator, letters -> morse code")
-print("only letters and numbers")
+print("letters and numbers")
 print("punctuation supported: ', :, ,, !, ?, ., &, (, ), - and "+'"')
 
 word = input("")
