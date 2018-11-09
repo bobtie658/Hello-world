@@ -1,4 +1,4 @@
-# welcome to game v2.1 by bobtie658
+# welcome to game v3.1 by bobtie658
 # currently functional, will add comments later
 #       change log
 # 3.1   minor bug fixes
