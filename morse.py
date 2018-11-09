@@ -16,99 +16,99 @@ while (time!=0):
     v = length-time
     
     if word[v]=="a" or word[v]=="A":
-        nword.append(". -   ")
+        nword.append(". _   ")
     elif word[v]=="b" or word[v]=="B":
-        nword.append("- . . .   ")
+        nword.append("_ . . .   ")
     elif word[v]=="c" or word[v]=="C":
-        nword.append("- . - .   ")
+        nword.append("_ . _ .   ")
     elif word[v]=="d" or word[v]=="D":
-        nword.append("- . .   ")
+        nword.append("_ . .   ")
     elif word[v]=="e" or word[v]=="E":
         nword.append(".   ")
     elif word[v]=="f" or word[v]=="F":
-        nword.append(". . - .   ")
+        nword.append(". . _ .   ")
     elif word[v]=="g" or word[v]=="G":
-        nword.append("- - .   ")
+        nword.append("_ _ .   ")
     elif word[v]=="h" or word[v]=="H":
         nword.append(". . . .   ")
     elif word[v]=="i" or word[v]=="I":
         nword.append(". .   ")
     elif word[v]=="j" or word[v]=="J":
-        nword.append(". - - -   ")
+        nword.append(". _ _ _   ")
     elif word[v]=="k" or word[v]=="K":
-        nword.append("- . -   ")
+        nword.append("_ . _   ")
     elif word[v]=="l" or word[v]=="L":
-        nword.append(". - . .   ")
+        nword.append(". _ . .   ")
     elif word[v]=="m" or word[v]=="M":
-        nword.append("- -   ")
+        nword.append("_ _   ")
     elif word[v]=="n" or word[v]=="N":
-        nword.append("- .   ")
+        nword.append("_ .   ")
     elif word[v]=="o" or word[v]=="O":
-        nword.append("- - -   ")
+        nword.append("_ _ _   ")
     elif word[v]=="p" or word[v]=="P":
-        nword.append(". - - .   ")
+        nword.append(". _ _ .   ")
     elif word[v]=="q" or word[v]=="Q":
-        nword.append("- - . -   ")
+        nword.append("_ _ . _   ")
     elif word[v]=="r" or word[v]=="R":
-        nword.append(". - .   ")
+        nword.append(". _ .   ")
     elif word[v]=="s" or word[v]=="S":
         nword.append(". . .   ")
     elif word[v]=="t" or word[v]=="T":
-        nword.append("-   ")
+        nword.append("_   ")
     elif word[v]=="u" or word[v]=="U":
-        nword.append(". . -   ")
+        nword.append(". . _   ")
     elif word[v]=="v" or word[v]=="V":
-        nword.append(". . . -   ")
+        nword.append(". . . _   ")
     elif word[v]=="w" or word[v]=="W":
-        nword.append(". - -   ")
+        nword.append(". _ _   ")
     elif word[v]=="x" or word[v]=="X":
-        nword.append("- . . -   ")
+        nword.append("_ . . _   ")
     elif word[v]=="y" or word[v]=="Y":
-        nword.append("- . - -   ")
+        nword.append("_ . _ _   ")
     elif word[v]=="z" or word[v]=="Z":
-        nword.append("- - . .   ")
+        nword.append("_ _ . .   ")
     elif word[v]=="1":
-        nword.append(". - - - -   ")
+        nword.append(". _ _ _ _   ")
     elif word[v]=="2":
-        nword.append(". . - - -   ")
+        nword.append(". . _ _ _   ")
     elif word[v]=="3":
-        nword.append(". . . - -   ")
+        nword.append(". . . _ _   ")
     elif word[v]=="4":
-        nword.append(". . . . -   ")
+        nword.append(". . . . _   ")
     elif word[v]=="5":
         nword.append(". . . . .   ")
     elif word[v]=="6":
-        nword.append("- . . . .   ")
+        nword.append("_ . . . .   ")
     elif word[v]=="7":
-        nword.append("- - . . .   ")
+        nword.append("_ _ . . .   ")
     elif word[v]=="8":
-        nword.append("- - - . .   ")
+        nword.append("_ _ _ . .   ")
     elif word[v]=="9":
-        nword.append("- - - - .   ")
+        nword.append("_ _ _ _ .   ")
     elif word[v]=="0":
-        nword.append("- - - - -   ")
+        nword.append("_ _ _ _ _   ")
     elif word[v]=="'":
-        nword.append(". - - - - .   ")
+        nword.append(". _ _ _ _ .   ")
     elif word[v]==":":
-        nword.append("- - - . . .   ")
+        nword.append("_ _ _ . . .   ")
     elif word[v]==",":
-        nword.append("- - . . - -   ")
+        nword.append("_ _ . . _ _   ")
     elif word[v]=="!":
-        nword.append("- . - . - -   ")
+        nword.append("_ . _ . _ _   ")
     elif word[v]=="?":
-        nword.append(". . - - . .   ")
+        nword.append(". . _ _ . .   ")
     elif word[v]==".":
-        nword.append(". - . - . -   ")
+        nword.append(". _ . _ . _   ")
     elif word[v]=='"':
-        nword.append(". - . . - .   ")
+        nword.append(". _ . . _ .   ")
     elif word[v]=='&':
-        nword.append(". - . . .   ")
+        nword.append(". _ . . .   ")
     elif word[v]=='(':
-        nword.append("- . - - .   ")
+        nword.append("_ . _ _ .   ")
     elif word[v]==')':
-        nword.append("- . - - . -   ")
+        nword.append("_ . _ _ . _   ")
     elif word[v]=='-':
-        nword.append("- . . . . -   ")
+        nword.append("_ . . . . _   ")
     elif word[v]==" ":
         nword.append("    ")
     time=time-1
