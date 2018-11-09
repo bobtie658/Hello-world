@@ -1,4 +1,5 @@
 # welcome to morse v1.1 by bobtie658
+# used https://morsecode.scphillips.com/morse2.html for translation
 # v1.1 log, added more symbols and capital letters
 
 print("welcome to morse code translator, letters -> morse code")
