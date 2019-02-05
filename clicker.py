@@ -1,4 +1,4 @@
-# Clicker game v1.5 by Bobtie
+# Clicker game by Bobtie
 
 
 mons = 0    # sets variable for money to 0
