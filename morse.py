@@ -1,4 +1,4 @@
-# welcome to morse v1.1 by bobtie658
+# welcome to morse v1.1 by bobtie
 # used https://morsecode.scphillips.com/morse2.html for translation
 # v1.1 log, added more symbols and capital letters
 
