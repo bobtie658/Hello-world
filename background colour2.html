@@ -16,11 +16,6 @@ function button() {
 cc = document.getElementById("colour").value
 cs = document.getElementById("colour2").value
 document.getElementById("style").innerHTML=`* {
-background: -webkit-gradient(linear, left top, right top, color-stop(0, `+cc+`), color-stop(1, `+cs+`));
-background: -webkit-linear-gradient(left, `+cc+` 0%, `+cs+` 100%);
-background: -moz-linear-gradient(left, `+cc+` 0%, `+cs+` 100%);
-background: -o-linear-gradient(left, `+cc+` 0%, `+cs+` 100%);
-background: -ms-linear-gradient(left, `+cc+` 0%, `+cs+` 100%);
 background: linear-gradient(to right, `+cc+` 0%, `+cs+` 100%);
 }`
 }
