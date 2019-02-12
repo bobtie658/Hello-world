@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Clicker</title>
+<style>
+* {
+	background-color: rgb(70,38,0);
+}
+p {
+	color: white;
+	font-size: 36px;
+	font-family: arial;
+}
+h1 {
+	color: white;
+	font-size: 72px;
+	font-family: arial;
+}
+#button1 {
+	background-image: url("doge.png");
+	width: 300px;
+	height: 300px;
+	background-position: center;
+	background-size: cover;
+	border-radius: 100%;
+	background-color: silver;
+	border: 3px solid black;
+	cursor: pointer;
+	transition-duration: 0.1s;
+}
+#button1:hover {
+	background-color: gray;
+}
+#button1:active {
+	transform: scale(0.95);
+}
+</style>
+</head>
+<body>
+<center>
+<h1>Dogecoin!</h1>
+<input type="button" id="button1" onClick="button()">
+<p id="p">You have 0 dogecoins!</p>
+</center>
+<script>
+var doge=0
+function button() {
+doge++
+document.getElementById("p").innerHTML="You have "+doge+" dogecoins!"
+}
+</script>
+</body>
+</html>
