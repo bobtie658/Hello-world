@@ -1,38 +1,64 @@
 <!DOCTYPE html>
+<!-- My second attempt at making a clicker game, this time in html and javascript -->
+
 <html>
 <head>
-<title>Clicker</title>
+<title id="title">Clicker 0 coins</title>
 <style>
 * {
 	background-color: rgb(70,38,0);
+	transition-duration: 0.1s;
 }
-p {
+p{
 	color: white;
 	font-size: 36px;
 	font-family: arial;
 }
-h1 {
+h1{
 	color: white;
 	font-size: 72px;
 	font-family: arial;
 }
+
 #button1 {
 	background-image: url("doge.png");
 	width: 300px;
 	height: 300px;
 	background-position: center;
+}
+input {
 	background-size: cover;
 	border-radius: 100%;
 	background-color: silver;
 	border: 3px solid black;
 	cursor: pointer;
-	transition-duration: 0.1s;
+	width: 100px;
+	height:100px;
+	background-position:top;
 }
-#button1:hover {
+#button2 {
+    background-image: url("pupper.png");
+}
+#button3 {
+    background-image: url("doggo.png");
+}
+#button4 {
+    background-image: url("borker.png");
+}
+input:hover {
 	background-color: gray;
 }
-#button1:active {
+input:active {
 	transform: scale(0.95);
+}
+td {
+    border-top: 1px solid #ddd;
+    text-align: center;
+    padding: 20px;
+}
+#p {
+    position: center;
+    text-transform: (0.5);
 }
 </style>
 </head>
@@ -40,13 +66,74 @@ h1 {
 <center>
 <h1>Dogecoin!</h1>
 <input type="button" id="button1" onClick="button()">
-<p id="p">You have 0 dogecoins!</p>
+<p>You have </p><p id="p">0</p><br><p> dogecoins!</p>
+<br><br>
+<table width="100%">
+<tr>
+    <td><input type="button" id="button2" onClick="button2()"></td>
+    <td><p id="puppercost">100 coins</p></td>
+    <td><p id="puppernumber">Pupper (0)</p></td>
+</tr>
+<tr>
+    <td><input type="button" id="button3" onClick="button3()"></td>
+    <td><p id="doggocost">1000 coins</p></td>
+    <td><p id="doggonumber">Doggo (0)</p></td>
+</tr>
+<tr>
+    <td><input type="button" id="button4" onClick="button4()"></td>
+    <td><p id="borkercost">10000 coins</p></td>
+    <td><p id="borkernumber">Borker (0)</p></td>
+</tr>
+</table>
 </center>
 <script>
 var doge=0
+var pupperprice=100
+var puppernum=0
+var doggoprice=1000
+var doggonum=0
+var borkerprice=10000
+var borkernum=0
 function button() {
 doge++
-document.getElementById("p").innerHTML="You have "+doge+" dogecoins!"
+document.getElementById("p").outerHTML="<p id='p' style='font-size:40px'>"+doge+"</p>"
+document.getElementById("title").innerHTML="Clicker "+doge+" coins"
+window.setTimeout(function() {
+    document.getElementById("p").outerHTML="<p id='p' style='font-size:36px'>"+doge+"</p>"
+}, 100);
+}
+function button2() {
+    if (doge>=pupperprice) {
+        doge-=pupperprice
+        puppernum++
+        document.getElementById("p").innerHTML=doge
+        document.getElementById("title").innerHTML="Clicker "+doge+" coins"
+        pupperprice=Math.floor(pupperprice*1.35)
+        document.getElementById("puppercost").innerHTML=pupperprice+" coins"
+        document.getElementById("puppernumber").innerHTML="Pupper ("+puppernum+")"
+    }
+}
+function button3() {
+    if (doge>=doggoprice) {
+        doge-=doggoprice
+        doggonum++
+        document.getElementById("p").innerHTML=doge
+        document.getElementById("title").innerHTML="Clicker "+doge+" coins"
+        doggoprice=Math.floor(doggoprice*1.35)
+        document.getElementById("doggocost").innerHTML=doggoprice+" coins"
+        document.getElementById("doggonumber").innerHTML="Doggo ("+doggonum+")"
+    }
+}
+function button4() {
+    if (doge>=borkerprice) {
+        doge-=borkerprice
+        borkernum++
+        document.getElementById("p").innerHTML=doge
+        document.getElementById("title").innerHTML="Clicker "+doge+" coins"
+        borkerprice=Math.floor(borkerprice*1.35)
+        document.getElementById("borkercost").innerHTML=borkerprice+" coins"
+        document.getElementById("borkernumber").innerHTML="Borker ("+borkernum+")"
+    }
 }
 </script>
 </body>
