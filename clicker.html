@@ -19,7 +19,6 @@ h1{
 	font-size: 72px;
 	font-family: arial;
 }
-
 #button1 {
 	background-image: url("doge.png");
 	width: 300px;
@@ -57,8 +56,11 @@ td {
     padding: 20px;
 }
 #p {
-    position: center;
-    text-transform: (0.5);
+  position: absolute;
+  left: 0;
+  top: 55%;
+  width: 100%;
+  text-align: center;
 }
 </style>
 </head>
@@ -94,9 +96,24 @@ var doggoprice=1000
 var doggonum=0
 var borkerprice=10000
 var borkernum=0
+function pupperhelp() {
+doge++
+document.getElementById("p").innerHTML=doge
+document.getElementById("title").innerHTML="Clicker "+doge+" coins"
+}
+function doggohelp() {
+doge=doge+10
+document.getElementById("p").innerHTML=doge
+document.getElementById("title").innerHTML="Clicker "+doge+" coins"
+}
+function borkerhelp() {
+doge=doge+1000
+document.getElementById("p").innerHTML=doge
+document.getElementById("title").innerHTML="Clicker "+doge+" coins"
+}
 function button() {
 doge++
-document.getElementById("p").outerHTML="<p id='p' style='font-size:40px'>"+doge+"</p>"
+document.getElementById("p").outerHTML="<p id='p' style='font-size:40px; top:54%;'>"+doge+"</p>"
 document.getElementById("title").innerHTML="Clicker "+doge+" coins"
 window.setTimeout(function() {
     document.getElementById("p").outerHTML="<p id='p' style='font-size:36px'>"+doge+"</p>"
@@ -111,6 +128,7 @@ function button2() {
         pupperprice=Math.floor(pupperprice*1.35)
         document.getElementById("puppercost").innerHTML=pupperprice+" coins"
         document.getElementById("puppernumber").innerHTML="Pupper ("+puppernum+")"
+		window.setInterval(pupperhelp,1000)
     }
 }
 function button3() {
@@ -122,6 +140,7 @@ function button3() {
         doggoprice=Math.floor(doggoprice*1.35)
         document.getElementById("doggocost").innerHTML=doggoprice+" coins"
         document.getElementById("doggonumber").innerHTML="Doggo ("+doggonum+")"
+		window.setInterval(doggohelp,1000)
     }
 }
 function button4() {
@@ -133,6 +152,7 @@ function button4() {
         borkerprice=Math.floor(borkerprice*1.35)
         document.getElementById("borkercost").innerHTML=borkerprice+" coins"
         document.getElementById("borkernumber").innerHTML="Borker ("+borkernum+")"
+		window.setInterval(borkerhelp,1000)
     }
 }
 </script>
