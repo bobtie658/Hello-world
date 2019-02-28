@@ -63,6 +63,24 @@ td {
   text-align: center;
 }
 </style>
+<style id="pupperstyle">
+#button5 {
+    background-image: url("pupper.png");
+	background-color:black;
+}
+</style>
+<style id="doggostyle">
+#button6 {
+    background-image: url("doggo.png");
+	background-color:black;
+}
+</style>
+<style id="borkerstyle">
+#button7 {
+    background-image: url("borker.png");
+	background-color:black;
+}
+</style>
 </head>
 <body>
 <center>
@@ -72,17 +90,17 @@ td {
 <br><br>
 <table width="100%">
 <tr>
-    <td><input type="button" id="button2" onClick="button2()"></td>
+    <td><input type="button" id="button5"></td>
     <td><p id="puppercost">100 coins</p></td>
     <td><p id="puppernumber">Pupper (0)</p></td>
 </tr>
 <tr>
-    <td><input type="button" id="button3" onClick="button3()"></td>
+    <td><input type="button" id="button6"></td>
     <td><p id="doggocost">1000 coins</p></td>
     <td><p id="doggonumber">Doggo (0)</p></td>
 </tr>
 <tr>
-    <td><input type="button" id="button4" onClick="button4()"></td>
+    <td><input type="button" id="button7"></td>
     <td><p id="borkercost">10000 coins</p></td>
     <td><p id="borkernumber">Borker (0)</p></td>
 </tr>
@@ -90,6 +108,7 @@ td {
 </center>
 <script>
 var doge=0
+var tdoge=0
 var pupperprice=100
 var puppernum=0
 var doggoprice=1000
@@ -98,26 +117,39 @@ var borkerprice=10000
 var borkernum=0
 function pupperhelp() {
 doge++
+tdoge++
 document.getElementById("p").innerHTML=doge
 document.getElementById("title").innerHTML="Clicker "+doge+" coins"
 }
 function doggohelp() {
 doge=doge+10
+tdoge=tdoge+10
 document.getElementById("p").innerHTML=doge
 document.getElementById("title").innerHTML="Clicker "+doge+" coins"
 }
 function borkerhelp() {
 doge=doge+1000
+tdoge=tdoge+1000
 document.getElementById("p").innerHTML=doge
 document.getElementById("title").innerHTML="Clicker "+doge+" coins"
 }
 function button() {
 doge++
+tdoge++
 document.getElementById("p").outerHTML="<p id='p' style='font-size:40px; top:54%;'>"+doge+"</p>"
 document.getElementById("title").innerHTML="Clicker "+doge+" coins"
 window.setTimeout(function() {
     document.getElementById("p").outerHTML="<p id='p' style='font-size:36px'>"+doge+"</p>"
 }, 100);
+if (tdoge=>100) {
+document.getElementById("button5").outerHTML="<input type='button' id='button2' onClick='button2()'>"
+}
+if (tdoge=>1000) {
+document.getElementById("button6").outerHTML="<input type='button' id='button3' onClick='button3()'>"
+}
+if (tdoge=>1000) {
+document.getElementById("button7").outerHTML="<input type='button' id='button4' onClick='button4()'>"
+}
 }
 function button2() {
     if (doge>=pupperprice) {
