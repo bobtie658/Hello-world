@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <!-- My second attempt at making a clicker game, this time in html and javascript -->
-
 <html>
 <head>
 <title id="title">Clicker 0 coins</title>
@@ -18,6 +17,8 @@ h1{
 	color: white;
 	font-size: 72px;
 	font-family: arial;
+	letter-spacing: 10px;
+	text-shadow: 5px 10px brown;
 }
 #button1 {
 	background-image: url("doge.png");
@@ -63,26 +64,13 @@ td {
   text-align: center;
 }
 </style>
-<style id="pupperstyle">
-#button5 {
-    background-image: url("pupper.png");
-	background-color:black;
-}
-</style>
-<style id="doggostyle">
-#button6 {
-    background-image: url("doggo.png");
-	background-color:black;
-}
-</style>
-<style id="borkerstyle">
-#button7 {
-    background-image: url("borker.png");
-	background-color:black;
+<style id="style">
+#p {
+ text-shadow: 2px 4px 0 rgba(255,0,0,0)
 }
 </style>
 </head>
-<body>
+<body onLoad="loaded()">
 <center>
 <h1>Dogecoin!</h1>
 <input type="button" id="button1" onClick="button()">
@@ -90,17 +78,17 @@ td {
 <br><br>
 <table width="100%">
 <tr>
-    <td><input type="button" id="button5"></td>
+    <td><input type="button" id="button2" style="background-color:black;"></td>
     <td><p id="puppercost">100 coins</p></td>
     <td><p id="puppernumber">Pupper (0)</p></td>
 </tr>
 <tr>
-    <td><input type="button" id="button6"></td>
+    <td><input type="button" id="button3" style="background-color:black;"></td>
     <td><p id="doggocost">1000 coins</p></td>
     <td><p id="doggonumber">Doggo (0)</p></td>
 </tr>
 <tr>
-    <td><input type="button" id="button7"></td>
+    <td><input type="button" id="button4" style="background-color:black;"></td>
     <td><p id="borkercost">10000 coins</p></td>
     <td><p id="borkernumber">Borker (0)</p></td>
 </tr>
@@ -115,6 +103,20 @@ var doggoprice=1000
 var doggonum=0
 var borkerprice=10000
 var borkernum=0
+var date=0
+var time=0
+var passed=0
+
+function shade() {
+time=Date.now()
+passed=((1000-Math.floor(time-date))/1000)
+document.getElementById("style").innerHTML="#p {text-shadow: 2px 4px 0 rgba(255,0,0,"+passed+")}"
+}
+
+function loaded() {
+window.setInterval(shade,100)
+}
+
 function pupperhelp() {
 doge++
 tdoge++
@@ -138,17 +140,18 @@ doge++
 tdoge++
 document.getElementById("p").outerHTML="<p id='p' style='font-size:40px; top:54%;'>"+doge+"</p>"
 document.getElementById("title").innerHTML="Clicker "+doge+" coins"
+date=Date.now()
 window.setTimeout(function() {
-    document.getElementById("p").outerHTML="<p id='p' style='font-size:36px'>"+doge+"</p>"
+document.getElementById("p").outerHTML="<p id='p' style='font-size:36px'>"+doge+"</p>"
 }, 100);
 if (tdoge>=100) {
-document.getElementById("button5").outerHTML="<input type='button' id='button2' onClick='button2()'>"
+document.getElementById("button2").outerHTML="<input type='button' id='button2' onClick='button2()'>"
 }
 if (tdoge>=1000) {
-document.getElementById("button6").outerHTML="<input type='button' id='button3' onClick='button3()'>"
+document.getElementById("button3").outerHTML="<input type='button' id='button3' onClick='button3()'>"
 }
 if (tdoge>=10000) {
-document.getElementById("button7").outerHTML="<input type='button' id='button4' onClick='button4()'>"
+document.getElementById("button4").outerHTML="<input type='button' id='button4' onClick='button4()'>"
 }
 }
 function button2() {
