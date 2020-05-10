@@ -1,3 +1,7 @@
+*University coursework*
+creating a simulation of a school
+
+
 In order to run using a configuration file, place it within the same directory as the rest of the files
 To use program, run administrator followed by the filename of the config file and then number of days to simulate
 eg. java Administrator config.txt 20
