@@ -1,3 +1,6 @@
+*uni coursework*
+make a mathduko game, requires javafx to run
+
 Mathduko by Piers Jonckers
 
 To run:
