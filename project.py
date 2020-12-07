@@ -6,7 +6,7 @@ Created on Tue Aug  6 14:12:39 2019
 """
 
 # Code created for RAL computer science department
-# original code was ~150 lines long, however the majority of it was cut out in order to put on github
+# original code was ~150 lines long, however the important code has been ommited for security reasons
 
 import fabric
 import paramiko
