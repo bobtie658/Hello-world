@@ -1,0 +1,10 @@
+LamDef [] (LamApp (LamApp (LamVar 1) (LamVar 2)) (LamVar 3))
+LamDef [] (LamAbs 1 (LamApp (LamVar 1) (LamVar 1)))
+LamDef [] (LamApp (LamAbs 1 (LamVar 1)) (LamVar 1))
+LamDef [] (LamApp (LamVar 1) (LamAbs 1 (LamVar 1)))
+LamDef [("T",(LamVar 1)),("G",(LamAbs 1 (LamVar 1)))] (LamApp (LamAbs 1 (LamVar 1)) (LamVar 1))
+LamDef [("A",(LamAbs 1 (LamVar 2))),("T",(LamVar 2)),("H",(LamVar 2))] (LamApp (LamAbs 1 (LamVar 2)) (LamVar 2))
+
+parseLamMacro "def MM = \\x1 -> x1 in MM"
+parseLamMacro "def M = \\x1 -> x1 in M M"
+parseLamMacro "def M = \\x1 -> x1 in M M M"

@@ -1,0 +1,1 @@
+prettyPrint $ cpsTransform (LamDef [("h",LamVar 0)] ex5'1)
