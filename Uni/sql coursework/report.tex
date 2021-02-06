@@ -1,0 +1,130 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Using sqlite to manage databases}
+\author{Piers Jonckers, pj2g19, 31081347}
+\date{May 2020}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+
+\begin{document}
+
+\maketitle
+
+\section{1. The Relational Model}
+\subsection{EX1}
+dataSet(dateRep(date), day(int), month(int), year(int), cases(int), deaths(int), countriesAndTerritories(varchar(255)), geoId(varchar(255)), countryterritoryCode(varchar(3)), popData2018(int), continentExp(varchar(255)))\\
+
+\subsection{EX2}
+I can't use the arrow symbol in latex, so I will replace it with "points to". I also couldn't use the squiggly brackets in latex.\\
+I am making the assumption that popData2018 will be updated with new population data, meaning in the future two countries may have the same population. I am also assuming that no countries share a name.\\
+I created a new attribute in order to differentiate the country codes, geoId and population counts from other countries as some of them are unknown.\\
+dateRep points to day, month, year\\
+day\\
+month\\
+year\\
+cases\\
+deaths\\
+countriesAndTerritories points to geoId, dataKey, countryterritoryCode, popData2018, continentExp\\
+geoId points to countriesAndTerritories, dataKey, countryterritoryCode, popData2018, continentExp (one territory has N/A as its geoId, so geoId shouldnt be relied on)\\
+dataKey points to countryterritoryCode and popData2018\\
+countryterritoryCode\\
+popData2018\\
+continentExp\\
+
+
+\subsection{EX3}
+dateRep, countriesAndTerritories\\
+dateRep, dataKey\\
+day, month, year, countriesAndTerritories\\
+day, month, year, dataKey\\
+
+\subsection{EX4}
+dateRep, countriesAndTerritories\\
+I will use this composite key as a primary key as it allows for all of the columns to be accessed as the country name is unique per country and the date only occurs once for each country.\\
+I cannot use the country code or geoId as there are some territories which do not have one.\\
+
+\section{2. Normalization}
+\subsection{EX5}
+There are two partial dependencies, dataKey and continentExp rely only on countriesAndTerritories.\\
+day, moth and year all rely on dateRep.\\
+\subsection{EX6}
+casesAndDeaths\\
+\begin{tabular}{|c|c|c|c|}
+\hline
+dateRep & countriesAndTerritories & cases & deaths \\
+\hline
+    [key]date & [key]varchar(255) & int & int\\
+\hline
+\end{tabular}\\\\\\
+date\\
+\begin{tabular}{|c|c|c|c|}
+\hline
+    dateRep & day & month & year \\
+    \hline
+    [key]date & int & int & int \\
+    \hline
+\end{tabular}\\\\\\
+countries\\
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+    countriesAndTerritories & geoId & dataKey & countryterritoryCode & popData2018 & continentExp \\
+    \hline
+    [key]varchar(255) & varchar(255) & int & varchar(3) & int & varchar(255)\\
+    \hline
+\end{tabular}\\\\\\
+\subsection{EX7}
+geoId, countryterritoryCode and popData2018 rely on dataKey.\\
+\subsection{EX8}
+Remove geoId, countryterritoryCode and popData2018 from the last relation and include a new relation.\\\\
+countryData\\
+\begin{tabular}{|c|c|c|c|}
+\hline
+    dataKey & geoId & countryterritoryCode & popData2018\\
+     \hline
+    [key]int & varchar(255) & varchar(3) & int \\
+     \hline
+\end{tabular}\\
+\subsection{EX9}
+Yes, neither of the parts of the parts of the candidate keys are dependent on any other attributes.
+
+\section{3. Modelling}
+\subsection{EX10}
+dataset.sql is included in the tar.gz.\\
+
+\subsection{EX11}
+I have made countriesAndTerritories the primary key of countries\\
+dateRep is the primary key of date\\
+dataKey is the primary key of countryData\\
+countries includes dataKey as a foreign key\\
+casesAndDeaths includes countriesAndTerritories and dateRep as foreign keys\\
+ex11.sql is included in the tar.gz.\\
+
+\subsection{EX12}
+ex12.sql is included in the tar.gz.\\
+
+\subsection{EX13}
+It is possible to read dataset.sql, followed by ex11.sql and ex12.sql to get the complete database.\\
+
+\section{4. Querying}
+\subsection{EX14}
+ex14.sql is included.\\
+
+\subsection{EX15}
+ex15.sql is included.\\
+
+\subsection{EX16}
+ex16.sql is inlucded.\\
+
+\subsection{EX17}
+ex17.sql is included.\\
+
+\subsection{EX18}
+ex18.sql is included.\\
+
+\subsection{EX19}
+ex19.sql is included.\\
+Uses window functions.\\
+
+\end{document}
