@@ -1,0 +1,1 @@
+SELECT SUM(casesAndDeaths.cases) AS 'total cases', SUM(casesAndDeaths.deaths) AS 'total deaths' FROM casesAndDeaths;
