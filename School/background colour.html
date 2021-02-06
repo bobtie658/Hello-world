@@ -1,0 +1,22 @@
+<!-- I thought it would be a good idea to use an input to change css elements -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Background changer</title>
+<style id="style"></style>
+</head>
+<body><center>
+<p style="background:White">Use the input box to input a colour, this can be as a word or rgb(red, green, blue) or as a hex</p>
+<p style="background:White">The colour inputted will change the background colour</p>
+<br><input id="colour" type="text" style="background:White"/>
+<br><input id="button" onClick="button()" type="button" value="background colour" style="background:White"/>
+</center>
+<script>
+function button() {
+cc = document.getElementById("colour").value
+document.getElementById("style").innerHTML="* {background: "+cc+"}"
+}
+</script>
+</body>
+</html>

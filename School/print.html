@@ -1,0 +1,32 @@
+<!-- WIP I wanted to get javascript to print something onto a page indefinately, unfortunately, I couldn't figure it out and now the page just crashes -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Title</title>
+</head>
+<body>
+<center>
+<script>
+var t = 0
+var text = ""
+    function button1() {
+        document.getElementById("buttonA").outerHTML="<input type='button' value='stop' onClick='button2()' id='buttonB'>"
+        while (t===0){
+            window.setInterval(function() { 
+            text=text+"1"+"<br>"
+                document.getElementById("p").innerHTML=text
+                },1000)
+        }
+    }
+    
+    function button2() {
+        document.getElementById("buttonB").outerHTML=''
+        t++
+    }
+</script>
+<p id="p"></p>
+<input type="button" value="start" onClick="button1()" id="buttonA">
+</center>
+</body>
+</html>

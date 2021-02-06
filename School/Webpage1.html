@@ -1,0 +1,56 @@
+<!-- Used this page to experiment with javascript "for" functions, I also used it to familiarise myself as I hadn't used html for a while -->
+
+<html>
+<head>
+<title>Webpage</title>
+<style>
+th,
+table,
+input,
+p,
+td {color: white;}
+* {background-color: black;}
+#button:active {color:grey;}
+</style>
+</head>
+<body>
+<center>
+	<table>
+	<tr>
+	<th>
+	Hello there
+	</th>
+	<th>
+	Ah
+	</th>
+	</tr>
+	<tr>
+	<td>
+	Hi
+	</td>
+	<td>
+	General kenobi
+	</td>
+	</tr>
+	</table>
+<br>
+<input type="text" name="something" id="text"><br>
+<input type="button" value="something else" id="button" onClick="button()"><br><br>
+<input type="button" value="display" id="button2" onClick="button2()"><br><br>
+<p id="words"></p>
+</center>
+</body>
+<script>
+var text = [""];
+text.shift();
+var i;
+function button() {
+	text.push(document.getElementById("text").value)
+	};
+function button2() {
+	for (i = 0; i<text.length; i++) {
+	window.alert(text[i])
+	}
+}
+</script>
+</html>
