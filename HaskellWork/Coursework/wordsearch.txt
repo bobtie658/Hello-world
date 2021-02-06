@@ -1,4 +1,0 @@
-search1 = ["akolimec","biregepa","fwamrlep","rinpaoar","ufglpnri","ineuelgc","tlemoneo","scherryt"]
-find1 = ["fruits","apple","orange","mango","apricot","pear","melon","cherry","kiwi","lime","plum","lemon","fig"]
-search2 = ["wrowihaazhmatgc","atsiurponushwda","atklarptglaadoa","norlsyltrwllorw","espochestnutgaa","doowderhurifwik","pclnwcottonwood","pkysermrdhicoui","mrrpnnaostppdql","hlrrrdcapkalder","oaeueeyalcklesh","hrhcnusnounpuka","acceopgsybirchw","thazelpamnhwrdl","dcincesweycudnt"]
-find2 = ["alder","cottonwood","pine","apple","cypress","poplar","ash","dogwood","redwood","aspen","elm","sequoia","birch","fir","spruce","buckthorn","hawthorn","sweetgum","cedar","hazel","sycamore","cherry","larch","walnut","chestnut","maple","willow","chinkapin","oak","yew"]
